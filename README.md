@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A quick dirty Next JS project to test [Interac IVC](https://portal.pp.vids.dev/auth/sign-in) integration.
 
 ## Getting Started
 
@@ -14,23 +14,25 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### POC #1 - Interac IVC Integration
+Open [Interac](http://localhost:3000/interac) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### POC #2 - CSS display, position and float properties
+Open [CSS Display, Position, Float Properties](http://localhost:3000/css-display-position-float.html) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Position** determines in what manner n item is positioned on the page or relative to one another. 
+By default, it is set to **static**, with elements displaying on the page in the order they appear in the document.
+  - **static** -- Element displays on the page in the order it appeared in the document. Top, right, bottom, left and z-index properties have no effect when used with static. Not stackable due to z-index restrictions.
+  - **relative** -- Similar to static but able to be offset by top, right, bottom, left and z-index properties.
+  - **absolute** -- Element positioned relative to its first non-static ancestor element. Similar to relative in that it may be offset by top, right, bottom, left, and z-index properties.
+  - **fixed** -- Similar to absolute, but positioned relative to the browser window. Scrolling will not move this element.
+  - **sticky** -- Element is positioned relative until a specified offset position is met by scrolling, then the element is positioned 'fixed' in that position on the scrolling element.
+- **Display** specifies the type of rendering box that is created from our HTML. A html element on the page is rendered as a box. Position property is to how to position those boxes, display property is for the type of rendering.
+  - **block** -- Element starts on a new line and take up the entire width. By default, div, p, h1-h6, ui, li and canavas are block-type of rendering. But they can be changed to different display type.
+  - **inline** -- Element can start anywhere on an existing line. Height and width properties have no effects. By default, span, input, button and img are in inline displayed.
+  - **inline-block** -- Element is displayed inline but height and width may be defined.
+  - **none** -- Removes this element and all children (different from visibility property -- which still take up space on the page)
+  - **flex** -- Element is displayed block-level with inner content in flexbox layout.
+  - **grid** -- Element is displayed block-level with inner content in grid layout.
+- **Float** float default is to none, setting to left or right 'floats' an element to the left or right of a container respectively, wrapping the rest of the content around it.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
