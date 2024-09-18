@@ -2,9 +2,12 @@
 
 import rsa from 'jsrsasign'
 
+const interacServer = 'https://gateway-portal.hub-verify.innovation.interac.ca';
+// const interacServer = 'https://gateway-devportal2.pp.vids.dev';
+
 export default function Interac() {
     const cfg = {
-        authUrl: 'https://gateway-devportal2.pp.vids.dev/auth',
+        authUrl: interacServer + '/auth',
         callbackUrl: 'http://localhost:3000/interac-callback',
         kid: 'interac.poc.key',
         clientIds: [
@@ -12,8 +15,8 @@ export default function Interac() {
             'be5b04e7-66b6-46b2-a3f6-41c978027e23',
             '39f1d587-6c40-41b0-a1b9-00ea5910e745',
             ],
-        issuer: 'https://gateway-devportal2.pp.vids.dev/',
-        audience: 'https://gateway-devportal2.pp.vids.dev/',
+        issuer: interacServer + '/',
+        audience: interacServer + '/',
         privateKey: `-----BEGIN PRIVATE KEY-----
 MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAxtqqvU1ZTj+lJEYT
 b54xMaDSc5s9Ak2e/bJqtOOUqiEaW9WvtM8OMIPBoOvE/HLsMl+CQlTMlHQBiuW3

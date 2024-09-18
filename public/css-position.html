@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Position</title>
+    <style>
+       .parent {
+           background-color: aqua;
+           position: relative;
+           padding: 10px;
+           height: 200vh;
+       }
+       .child-one {
+           background-color: green;
+
+           /*position: absolute;*/
+           /*position: fixed;*/
+           position: sticky;
+           top: 0;
+           /*position: relative;*/
+           /*left: 10px;*/
+           /*right: 10px;*/
+           /*top: 10px;*/
+       }
+       .child-two {
+           background-color: orangered;
+           /*position: relative;*/
+       }
+       .child-three {
+           background-color: orchid;
+       }
+       .child {
+           /*height: 50px;*/
+           /*height: 350px;*/
+           /*padding-top: 10px;*/
+       }
+       div {
+           font-size: larger;
+       }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent
+        <div class="child-one child">One</div>
+        <div class="child-two child">Two 222</div>
+        <div class="child-three child">Three</div>
+    </div>
+</body>
+</html>

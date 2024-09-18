@@ -4,6 +4,9 @@ import rsa from 'jsrsasign'
 import { useSearchParams } from 'next/navigation'
 import Link from "next/link";
 
+const interacServer = 'https://gateway-portal.hub-verify.innovation.interac.ca';
+// const interacServer = 'https://gateway-devportal2.pp.vids.dev';
+
 export default async function Page() {
     const searchParams = useSearchParams()
     const code = searchParams.get('code')
@@ -11,8 +14,8 @@ export default async function Page() {
     const typeStr = searchParams.get('type')
     const type: number = typeStr ? parseInt(typeStr, 10) : 1;
     const cfg = {
-        userInfoUrl: 'https://gateway-devportal2.pp.vids.dev/userinfo',
-        tokenUrl: 'https://gateway-devportal2.pp.vids.dev/oauth2/token',
+        userInfoUrl: interacServer + '/userinfo',
+        tokenUrl: interacServer + '/oauth2/token',
         callbackUrl: 'http://localhost:3000/interac-callback',
         kid: 'interac.poc.key',
         clientIds: [
@@ -25,7 +28,7 @@ export default async function Page() {
             'be5b04e7-66b6-46b2-a3f6-41c978027e23',
             '39f1d587-6c40-41b0-a1b9-00ea5910e745',
         ],
-        audience: 'https://gateway-devportal2.pp.vids.dev/oauth2/token',
+        audience: interacServer + '/oauth2/token',
         privateKey: `-----BEGIN PRIVATE KEY-----
 MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAxtqqvU1ZTj+lJEYT
 b54xMaDSc5s9Ak2e/bJqtOOUqiEaW9WvtM8OMIPBoOvE/HLsMl+CQlTMlHQBiuW3
@@ -93,6 +96,7 @@ Z7In/rUwMco=
         },
     }).then(response => response.json())
         .then(json => json["access_token"]);
+
     const userInfo = await fetch(cfg.userInfoUrl, {
         method: "GET",
         headers: {
