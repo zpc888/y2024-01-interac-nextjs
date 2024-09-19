@@ -1,27 +1,27 @@
-### Google Map API - pizza restaurant:  AIzaSyDaiekhotdwzjC3BI_B2wMYctlD3HakiAg   AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
-GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=pizza&location=41.40338%2C2.17403&radius=500&type=restaurant&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
+### Google Map API - pizza restaurant:  {{GOOGLE_API_KEY}}
+GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=pizza&location=41.40338%2C2.17403&radius=500&type=restaurant&key={{GOOGLE_API_KEY}}
 accept: application/json
 
 ### Google Map API - cibc bank:
-GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=bank&location=41.40338%2C2.17403&radius=1000&type=cibc&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
+GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=bank&location=41.40338%2C2.17403&radius=1000&type=cibc&key={{GOOGLE_API_KEY}}
 accept: application/json
 
 ### Convert 78 bannatyne to latitude/longitude
-GET https://maps.googleapis.com/maps/api/geocode/json?address=78%20Bannatyne%20Drive%20Toronto%20ON%20M2L%202P5&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
+GET https://maps.googleapis.com/maps/api/geocode/json?address=78%20Bannatyne%20Drive%20Toronto%20ON%20M2L%202P5&key={{GOOGLE_API_KEY}}
 accept: application/json
 
 ### Google Map API - cibc bank near 78 bannatyne
-#GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=bank&location=43.7602012%2C-79.369303&radius=1000&type=cibc&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
-#GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=cibc&location=43.7602012%2C-79.369303&radius=1000&type=bank&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
-GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.7602012%2C-79.369303&radius=5000&type=bank&keyword=cibc%20branch&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
+#GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=bank&location=43.7602012%2C-79.369303&radius=1000&type=cibc&key={{GOOGLE_API_KEY}}
+#GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=cibc&location=43.7602012%2C-79.369303&radius=1000&type=bank&key={{GOOGLE_API_KEY}}
+GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.7602012%2C-79.369303&radius=5000&type=bank&keyword=cibc%20branch&key={{GOOGLE_API_KEY}}
 accept: application/json
 
 ### Google Map API - 2904 Sheppard Ave E, Toronto Branch detail info
-GET https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJZ7MriyvO1IkRGS-EJWBlR9A&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
+GET https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJZ7MriyvO1IkRGS-EJWBlR9A&key={{GOOGLE_API_KEY}}
 accept: application/json
 
 ### Google Map API - 2904 Sheppard Ave E, Toronto Branch selected info
-GET https://maps.googleapis.com/maps/api/place/details/json?fields=formatted_address%2cname%2crating%2ccurrent_opening_hours&place_id=ChIJZ7MriyvO1IkRGS-EJWBlR9A&key=AIzaSyBPHofs9Od9CO6iojmaOjnpuqIOcB7C4oY
+GET https://maps.googleapis.com/maps/api/place/details/json?fields=formatted_address%2cname%2crating%2ccurrent_opening_hours&place_id=ChIJZ7MriyvO1IkRGS-EJWBlR9A&key={{GOOGLE_API_KEY}}
 accept: application/json
 
 #Found a place
